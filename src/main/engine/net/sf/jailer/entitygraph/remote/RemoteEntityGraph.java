@@ -264,9 +264,9 @@ public class RemoteEntityGraph extends EntityGraph {
 	 */
 	@Override
 	public void delete() throws SQLException {
-		session.executeUpdate("Delete from " + dmlTableReference(DEPENDENCY, session) + " Where r_entitygraph=" + graphID + "");
-		session.executeUpdate("Delete from " + dmlTableReference(ENTITY, session) + " Where r_entitygraph=" + graphID + "");
-		session.executeUpdate("Delete from " + dmlTableReference(ENTITY_GRAPH, session) + " Where id=" + graphID + "");
+//		session.executeUpdate("Delete from " + dmlTableReference(DEPENDENCY, session) + " Where r_entitygraph=" + graphID + "");
+//		session.executeUpdate("Delete from " + dmlTableReference(ENTITY, session) + " Where r_entitygraph=" + graphID + "");
+//		session.executeUpdate("Delete from " + dmlTableReference(ENTITY_GRAPH, session) + " Where id=" + graphID + "");
 	}
 
 	/**
@@ -772,10 +772,10 @@ public class RemoteEntityGraph extends EntityGraph {
 	 */
 	@Override
 	public long deleteEntities(Table table) throws SQLException {
-		return session.executeUpdate(
-				"Delete From " + dmlTableReference(ENTITY, session) + " " +
-				"Where r_entitygraph=" + graphID + " and " +
-					   "type=" + typeName(table));
+//		return session.executeUpdate(
+//				"Delete From " + dmlTableReference(ENTITY, session) + " " +
+//				"Where r_entitygraph=" + graphID + " and " +
+//					   "type=" + typeName(table));
 	}
 
 	/**
