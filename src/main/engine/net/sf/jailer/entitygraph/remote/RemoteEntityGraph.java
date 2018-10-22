@@ -776,6 +776,7 @@ public class RemoteEntityGraph extends EntityGraph {
 //				"Delete From " + dmlTableReference(ENTITY, session) + " " +
 //				"Where r_entitygraph=" + graphID + " and " +
 //					   "type=" + typeName(table));
+		return 0;
 	}
 
 	/**
